@@ -1,0 +1,35 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #24353F;
+}   
+
+.container{
+    background-color: #24353F;
+    box-shadow: 10px 10px 50px  rgba(0,0,0,.3);
+}
+.container h1{
+    color: #1995A9;
+}
+.container input{
+    background-color: transparent;
+    color: azure;
+}
+.form-control:focus{
+    background-color: transparent;
+    box-shadow:none
+    
+}
+.container input::placeholder{
+    color: rgba(127, 255, 212, 0.566);
+}
+.container  .signinLink{
+    text-decoration: none;
+}
+.container .signinLink:hover{
+     text-decoration: underline;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN APP</title>
+    <link rel="stylesheet" href="./ssignup css/all.min.css">
+    <link rel="stylesheet" href="./ssignup css/bootstrap.min.css">
+    <link rel="stylesheet" href="./ssignup css/signup.css">
+</head>
+<body >
+
+
+    <div class="w-50 mx-auto text-center container p-5 my-5">
+        <h1>Smart Login System</h1>
+            <form >
+                <input type="text" class="form-control my-4 text-white " name="username" id="userName" placeholder="Enter your Name">
+                <input type="email" class="form-control my-4 text-white " name="useremail" id="userEmail" placeholder="Enter your Email"> 
+                <input type="password" class="form-control my-4 text-white "  name="userpassword" id="userPassword" placeholder="Enter your password">
+                <button id="Signup" class="form-control btn btn-outline-info">Signup</button>
+                <div class="alert alert-danger d-none" id="nameAlert">At Last Two Character</div>
+                <div class="alert alert-danger d-none" id="emailAlert">Please enter Valid Email</div>
+                <div class="alert alert-danger d-none" id="passwordAlert">ٍPassword must have at least one capital character and small character<br>must contain number-<br>must have special character</div>
+                <div class="alert alert-danger d-none" id="existAlert">Email is already exist</div>
+                <div class="alert alert-success d-none" id="successAlert">Success</div>
+            </form>
+       <div class="position-relative">
+        <p class="text-white fs-5 text-center mt-3 ">you have an account?
+            <a class="signinLink text-white " href="../login/loginPage.html">Signin</a></p>
+       </div>
+    </div>
+
+
+
+    <script src="./signUp js/bootstrap.bundle.js"></script>
+    <script src="./signUp js/signUp.js"></script>
+</body>
+</html>
