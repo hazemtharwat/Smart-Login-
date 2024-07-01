@@ -9,12 +9,7 @@ allUsers=JSON.parse(localStorage.getItem("allUsers"));
 
 loginbtn.addEventListener("click",function(e){
     e.preventDefault()
-    // userIsValid()
     loginData()
-    // if(userIsValid()==true){
-    //     
-        
-    // }  
     
 })
 function loginData(){
@@ -23,10 +18,10 @@ function loginData(){
         password:loginPassword.value,
     }
     
-  if(  userIsValid(userData)==true){
+  if(  userIsValid(userData)){
     setTimeout(function(){
             window.location.href='../../Home/home.html'
-            },500)
+            },500)              
   }
 }
 
@@ -35,20 +30,14 @@ function userIsValid(userData){
     for(let i=0 ; i<allUsers.length; i++){
     if((allUsers[i].email.toLowerCase() == userData.email.toLowerCase()) 
         && (allUsers[i].password == userData.password)){
-       
         successAlert.classList.replace('d-none','d-block');
-        
-       
-            // return true;
-        /* ( return   لما بشغل ال 
-        0 مش بيكمل اللوب وبيجيب ان الايميل مش موجود لانه فى اندكس غير اندكس ) 
-        
-        */
+        localStorage.setItem("username",allUsers[i].name);
+            return true;
         }
         else{
             console.log("مش تبعنا");
             successAlert.classList.replace('d-block','d-none');
-            // return false
+
         }
        
 }
